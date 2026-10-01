@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="42个AI订阅代充网站的价格、代理规则与公开推广证据。2026年10月1日调研快照，支持套餐筛选、价格排序及Excel下载。">
+  <meta name="theme-color" content="#153f3b">
+  <title>AI订阅市场调研 · 价格与渠道</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#prices">跳到价格比较</a>
+  <aside class="sidebar">
+    <a class="brand" href="#top"><span class="brand-mark">订</span><span>订阅观察<span class="brand-en">SUBSCRIPTION FIELDNOTES</span></span></a>
+    <div class="sidebar-caption">研究档案 / 001</div>
+    <nav aria-label="页面导航">
+      <a href="#prices"><span>01</span>价格比较</a>
+      <a href="#agency"><span>02</span>代理与分销</a>
+      <a href="#growth"><span>03</span>增长与推广</a>
+      <a href="#calculator"><span>04</span>利润情景</a>
+      <a href="#directory"><span>05</span>全部商家</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a class="download-link" href="downloads/price-agency.xlsx" download>下载 Excel <span aria-hidden="true">↗</span></a>
+      <a class="quiet-link" href="report.html">阅读完整报告 ↗</a>
+      <a class="quiet-link" href="https://github.com/siuserxiaowei/gpt-subscription-research" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a>
+      <p>公开资料核对<br>研究日期 2026.10.01</p>
+    </div>
+  </aside>
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow"><span class="status-dot"></span>研究快照 <span>2026 / 10 / 01</span></div>
+      <h1>AI 订阅市场，<br><em>把价格和生意看清楚。</em></h1>
+      <p class="hero-description">从 GPT 代充到代理分销，整理网站报价、合作条件与公开推广记录。每条记录保留来源，方便比较，也方便回访核对。</p>
+      <div class="hero-links"><a class="button primary" href="#prices">开始比较 <span aria-hidden="true">↓</span></a><a class="button secondary" href="report.html">完整调研报告 ↗</a></div>
+      <div class="hero-stamp" aria-hidden="true">FIELD<br>RESEARCH<span>VOL. 001</span></div>
+    </header>
+    <div class="stat-grid" aria-label="调查范围">
+      <div><strong>42</strong><span>网站与商城入口</span></div><div><strong>32</strong><span>取得当日报价的商家</span></div><div><strong>162</strong><span>当日页面报价记录</span></div><div><strong>12</strong><span>公开代理模式</span></div>
+    </div>
+    <div class="snapshot-note"><span class="note-label">阅读口径</span><p><strong>报价为 2026 年 10 月 1 日快照，页面不会自动更新价格。</strong>不同渠道、币种、账号条件与售后不能视为同一商品。商家销量与利润自报不等于已验证经营数据；本次未付款或试充。</p></div>
+
+    <section id="prices" class="section">
+      <div class="section-heading"><div><div class="eyebrow">01 / PRICE EXPLORER</div><h2>价格，从低到高。</h2></div><p>切换套餐后，独立比较该组报价。<br>原始商品名称和限制保留在详情中。</p></div>
+      <div class="quick-tabs" role="group" aria-label="常用套餐">
+        <button type="button" data-family="ChatGPT Plus" class="active" aria-pressed="true">Plus</button><button type="button" data-family="ChatGPT Pro 5X" aria-pressed="false">Pro 5X</button><button type="button" data-family="ChatGPT 200美元档_核条件" aria-pressed="false">200美元档</button><button type="button" data-family="ChatGPT 旧Pro续费" aria-pressed="false">旧 Pro 续费</button><button type="button" data-family="Claude Pro" aria-pressed="false">Claude Pro</button>
+      </div>
+      <div class="filter-panel">
+        <label class="search-field">搜索商家或商品<input id="price-search" type="search" placeholder="例如：贝贝、iOS、菲区" autocomplete="off"></label>
+        <label>套餐组<select id="family-filter"><option>加载中…</option></select></label>
+        <label>渠道<select id="channel-filter"><option value="">全部渠道</option></select></label>
+        <label>排序<select id="sort-filter"><option value="asc">总价：低到高</option><option value="desc">总价：高到低</option><option value="monthly">算术月均：低到高</option></select></label>
+        <div class="filter-checks"><label><input id="lowest-only" type="checkbox" checked> 每家只显示最低报价</label><label><input id="exclude-estimates" type="checkbox"> 排除人民币估算价</label></div>
+      </div>
+      <div id="plan-note" class="plan-note"></div>
+      <div class="result-bar"><span id="result-count" role="status" aria-live="polite">正在读取报价…</span><span>价格单位按原页面口径</span></div>
+      <div class="table-wrap"><table class="price-table"><caption class="sr-only">筛选后的商家报价</caption><thead><tr><th scope="col">序</th><th scope="col">商家 / 商品</th><th scope="col">页面标价</th><th scope="col">渠道</th><th scope="col">库存与条件</th><th scope="col">来源</th></tr></thead><tbody id="price-rows"></tbody></table></div>
+      <div id="price-empty" class="empty-state" hidden>没有符合条件的报价。试试其他套餐或清空搜索。</div>
+      <p class="footnote">“每家最低报价”比较的是页面价格，未验证可交付性或渠道资金。多月商品的月均是算术值，质保期未必覆盖整个周期。旧索引报价单独保存在 Excel 中，不纳入此表。</p>
+    </section>
+
+    <section id="agency" class="section">
+      <div class="section-heading"><div><div class="eyebrow">02 / PARTNER MODELS</div><h2>先分清，钱交给谁。</h2></div><p>拿货余额、资格费、建站费和押金，<br>是四种不同的资金用途。</p></div>
+      <div class="model-strip"><div><b>推荐返佣</b><p>你带客户，平台收款与交付。</p></div><div><b>批发转售</b><p>你拿货与定价，承担客户沟通。</p></div><div><b>自有站点</b><p>你经营品牌，上游提供供货。</p></div></div>
+      <div id="agency-cards" class="agency-grid"></div>
+    </section>
+
+    <section id="growth" class="section">
+      <div class="section-heading"><div><div class="eyebrow">03 / GROWTH EVIDENCE</div><h2>从公开动作，看获客路径。</h2></div><p>区分已观察到的推广动作，<br>商家自报数据和有依据的推断。</p></div>
+      <div class="growth-summary"><p><span>内容</span>教程与个人主页带来询单</p><p><span>渠道</span>社群与代理推动首单</p><p><span>复购</span>售后、通知与推荐衔接订单</p></div>
+      <div id="growth-cards" class="growth-grid"></div>
+    </section>
+
+    <section id="calculator" class="section calculator-section">
+      <div class="section-heading"><div><div class="eyebrow">04 / UNIT ECONOMICS</div><h2>价差，还不是利润。</h2></div><p>修改假设，看看每单贡献<br>与固定投入需要的订单量。</p></div>
+      <div class="calculator-layout"><div class="calc-inputs">
+        <label>零售价 / 元<input id="calc-sale" type="number" min="0" step="0.01" value="149"></label><label>采购成本 / 元<input id="calc-cost" type="number" min="0" step="0.01" value="115"></label><label>支付费率 / %<input id="calc-fee" type="number" min="0" max="100" step="0.1" value="3"></label><label>售后预留 / %<input id="calc-reserve" type="number" min="0" max="100" step="0.1" value="5"></label><label>人工成本 / 元<input id="calc-labor" type="number" min="0" step="0.01" value="5"></label><label>每单获客成本 / 元<input id="calc-acquisition" type="number" min="0" step="0.01" value="0"></label>
+      </div><div class="calc-output"><span class="calc-caption">每单贡献 · 情景计算</span><strong id="calc-contribution">¥17.08</strong><p>售价 − 采购 − 支付费 − 售后预留 − 人工 − 获客</p><div class="breakeven"><div>覆盖 500 元固定投入<b id="calc-small">30 单</b></div><div>覆盖 5000 元固定投入<b id="calc-large">293 单</b></div></div><p class="calc-disclaimer">这是可修改的假设，不是商家真实毛利。未包含税费、汇兑和其他固定成本；预充余额与押金不等同于固定费用。</p></div></div>
+    </section>
+
+    <section id="directory" class="section">
+      <div class="section-heading"><div><div class="eyebrow">05 / COMPLETE DIRECTORY</div><h2>42 个入口，全部保留。</h2></div><p>没有取得报价的站点也在这里。<br>网站数量不等于独立上游数量。</p></div>
+      <div class="directory-toolbar"><label class="search-field">搜索网站或推特账号<input id="directory-search" type="search" placeholder="商家名称、域名或账号" autocomplete="off"></label><span id="directory-count" role="status" aria-live="polite"></span></div>
+      <div id="directory-cards" class="directory-grid"></div>
+    </section>
+    <footer class="footer"><div class="footer-title">保留出处，才方便判断。</div><p>报告依据公开网页与经营者公开内容。价格、库存与政策会变化；成交前请重新核对。</p><div><a href="report.html">完整报告 ↗</a><a href="downloads/price-agency.xlsx" download>Excel 下载 ↓</a><a href="data/research.json" download>公开数据 ↓</a><a href="https://github.com/siuserxiaowei/gpt-subscription-research" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><small>RESEARCH SNAPSHOT · 2026.10.01</small></footer>
+    <div id="load-error" class="load-error" role="alert" hidden>数据未能加载。请刷新页面，或直接<a href="report.html">阅读完整报告</a>。</div>
+  </main>
+</body>
+</html>
