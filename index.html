@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="42个AI订阅代充网站的价格、代理规则与公开推广证据。2026年10月1日调研快照，支持套餐筛选、价格排序及Excel下载。">
+  <meta name="description" content="AI订阅市场与经营案例研究：42个网站的价格、代理规则和推广证据，以及七位经营者的公开路径。保留来源与历史快照，支持筛选和Excel下载。">
   <meta name="theme-color" content="#153f3b">
-  <title>AI订阅市场调研 · 价格与渠道</title>
+  <title>AI订阅研究 · 价格、渠道与经营案例</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site-nav.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -21,6 +22,7 @@
       <a href="#growth"><span>03</span>增长与推广</a>
       <a href="#calculator"><span>04</span>利润情景</a>
       <a href="#directory"><span>05</span>全部商家</a>
+      <a href="casebook/"><span>06</span>经营案例 ↗</a>
     </nav>
     <div class="sidebar-bottom">
       <a class="download-link" href="downloads/price-agency.xlsx" download>下载 Excel <span aria-hidden="true">↗</span></a>
@@ -31,11 +33,12 @@
     </div>
   </aside>
   <main id="top">
+    <nav class="site-nav" aria-label="研究站栏目"><a class="site-nav-brand" href="index.html">订阅观察</a><a href="index.html" aria-current="page">市场调研</a><a href="casebook/">经营案例</a><a href="enterprise-advantages.html">企业优势</a><a href="report.html">完整报告</a></nav>
     <header class="hero">
       <div class="eyebrow"><span class="status-dot"></span>研究快照 <span>2026 / 10 / 01</span></div>
       <h1>AI 订阅市场，<br><em>把价格和生意看清楚。</em></h1>
-      <p class="hero-description">从 GPT 代充到代理分销，整理网站报价、合作条件与公开推广记录。每条记录保留来源，方便比较，也方便回访核对。</p>
-      <div class="hero-links"><a class="button primary" href="#prices">开始比较 <span aria-hidden="true">↓</span></a><a class="button secondary" href="report.html">完整调研报告 ↗</a></div>
+      <p class="hero-description">从 GPT 代充到代理分销，整理网站报价、合作条件与公开推广记录，并追踪七位经营者的起步、获客、交付与续费路径。每条记录保留来源，方便比较与回访核对。</p>
+      <div class="hero-links"><a class="button primary" href="#prices">开始比较 <span aria-hidden="true">↓</span></a><a class="button secondary" href="casebook/">经营者案例 ↗</a></div>
       <div class="hero-stamp" aria-hidden="true">FIELD<br>RESEARCH<span>VOL. 001</span></div>
     </header>
     <div class="stat-grid" aria-label="调查范围">
@@ -86,7 +89,7 @@
       <div class="directory-toolbar"><label class="search-field">搜索网站或推特账号<input id="directory-search" type="search" placeholder="商家名称、域名或账号" autocomplete="off"></label><span id="directory-count" role="status" aria-live="polite"></span></div>
       <div id="directory-cards" class="directory-grid"></div>
     </section>
-    <footer class="footer"><div class="footer-title">保留出处，才方便判断。</div><p>报告依据公开网页与经营者公开内容。价格、库存与政策会变化；成交前请重新核对。</p><div><a href="report.html">完整报告 ↗</a><a href="downloads/price-agency.xlsx" download>Excel 下载 ↓</a><a href="data/research.json" download>公开数据 ↓</a><a href="https://github.com/siuserxiaowei/gpt-subscription-research" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><small>RESEARCH SNAPSHOT · 2026.10.01</small></footer>
+    <footer class="footer"><div class="footer-title">保留出处，才方便判断。</div><p>报告依据公开网页与经营者公开内容。价格、库存与政策会变化；成交前请重新核对。</p><div><a href="casebook/">经营案例 ↗</a><a href="report.html">完整报告 ↗</a><a href="downloads/price-agency.xlsx" download>Excel 下载 ↓</a><a href="data/research.json" download>公开数据 ↓</a><a href="https://github.com/siuserxiaowei/gpt-subscription-research" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><small>RESEARCH SNAPSHOT · 2026.10.01</small></footer>
     <div id="load-error" class="load-error" role="alert" hidden>数据未能加载。请刷新页面，或直接<a href="report.html">阅读完整报告</a>。</div>
   </main>
 </body>

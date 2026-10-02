@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/siuserxiaowei/ai-subscription-casebook",
+  "commit": "a0695ca72c4a961567a069fd840b84b26702c91e",
+  "prefix": "casebook/",
+  "history": "Imported with git subtree without squashing; original commit remains in ancestry.",
+  "original_pages_url": "https://siuserxiaowei.github.io/ai-subscription-casebook/",
+  "new_pages_url": "https://siuserxiaowei.github.io/gpt-subscription-research/casebook/",
+  "integrated_on": "2026-10-02",
+  "content_snapshot": "2026-09-30",
+  "content_changes": "Navigation, title, canonical URL and brand colors; case content and source links preserved."
+}

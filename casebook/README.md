@@ -1,9 +1,11 @@
 # AI订阅经营模式参考
 
+本栏目已于2026-10-02合并到 [AI订阅研究](../README.md)。[在线阅读经营案例](https://siuserxiaowei.github.io/gpt-subscription-research/casebook/)，后续在本仓库的 `casebook/` 目录更新。
+
 基于截至2026年9月30日已检索的公开资料，整理七位经营者的起步、获客、代理合作、交付、售后和续费路径。
 
 包含六种模式对照、七位经营者案例、66条流程观察和71个来源链接。公开帖、SOP、招商广告和页面快照分别标注，未将其当作独立核验的成交、授权或经营业绩。
 
-网页采用静态HTML、CSS和JavaScript，GitHub Pages从main分支根目录发布。
+网页采用静态HTML、CSS和JavaScript，随主仓GitHub Pages从main分支根目录发布。
 
 整理日期：2026年10月1日。
