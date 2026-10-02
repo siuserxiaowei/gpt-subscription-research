@@ -62,12 +62,23 @@
     .card.core h3 { color: var(--forest); }
     .card.build { background: #f7efe3; }
     .card.build .tag { color: #85502f; background: #f0dcc1; }
+    .advantage-group { margin-top: 43px; }
+    .group-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-bottom: 15px; padding: 0 0 13px; border-bottom: 2px solid var(--group-accent); }
+    .group-head h2 { margin: 0; color: var(--group-accent); font: 600 29px/1.25 var(--serif); letter-spacing: -.5px; }
+    .group-head p { max-width: 600px; margin: 0; color: var(--muted); font-size: 12px; text-align: right; }
+    .advantage-group .grid { border-top: 0; }
+    .advantage-group .card { min-height: 167px; background: var(--group-surface); }
+    .advantage-group .card h3 { color: var(--group-accent); }
+    .upstream { --group-accent: #16463f; --group-surface: #e8efe9; }
+    .downstream { --group-accent: #2d6271; --group-surface: #e7eff1; }
+    .enterprise { --group-accent: #a85f34; --group-surface: #f5e9db; }
+    .group-count { color: var(--group-accent); font: 10px var(--mono); letter-spacing: 1px; white-space: nowrap; }
     .note { display: grid; grid-template-columns: auto 1fr; gap: 17px; align-items: start; margin-top: 37px; padding: 20px 21px; background: var(--sand); border-left: 3px solid var(--rust); }
     .note b { color: var(--forest); font-size: 13px; white-space: nowrap; }
     .note p { margin: 0; color: #716858; font-size: 12px; line-height: 1.8; }
     footer { display: flex; justify-content: space-between; gap: 24px; margin-top: 37px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
     footer span:last-child { font-family: var(--mono); letter-spacing: .7px; }
-    @media (max-width: 1000px) { .page { padding: 38px 30px; } .grid { grid-template-columns: repeat(2, 1fr); } .masthead { display: block; } .stamp { width: 180px; } }
+    @media (max-width: 1000px) { .page { padding: 38px 30px; } .grid { grid-template-columns: repeat(2, 1fr); } .masthead { display: block; } .stamp { width: 180px; } .group-head { display: block; } .group-head p { margin-top: 8px; text-align: left; } }
     @media (max-width: 620px) { .page { padding: 28px 18px 36px; } h1 { font-size: 43px; } .thesis { grid-template-columns: 1fr; } .thesis > div, .thesis > div:first-child { padding: 16px 0; border-right: 0; border-bottom: 1px solid var(--line); } .thesis > div:last-child { border-bottom: 0; } .grid { grid-template-columns: 1fr; } .card { min-height: 166px; } footer { display: block; } footer span { display: block; margin-top: 8px; } }
     @media print { body { background: var(--paper); } .page { max-width: none; padding: 22px; } .card { break-inside: avoid; } }
   </style>
@@ -77,10 +88,10 @@
     <header class="masthead">
       <div>
         <div class="kicker">Enterprise AI / value map · 2026</div>
-        <h1>企业真正会买的<br><em>20 项优势。</em></h1>
+        <h1>企业真正会买的<br><em>三层优势。</em></h1>
         <p class="lede">从上游多渠道供给，到下游伙伴销售，再到企业内部多模型接入。下面只保留客户能感知、能影响采购和长期合作的价值。</p>
       </div>
-      <div class="stamp"><strong>20</strong>核心优势<br>采购 · 接入 · 落地 · 运维</div>
+      <div class="stamp"><strong>37</strong>条核心优势<br>上游 · 下游 · 企业端</div>
     </header>
 
     <section class="thesis" aria-label="核心判断">
@@ -89,37 +100,62 @@
       <div><b>最强竞争组合</b><span>稳定供货 + 复杂售后承接 + 内部中转站 + 一对一技术服务。</span></div>
     </section>
 
-    <section aria-labelledby="advantage-title">
-      <div class="section-label"><h2 id="advantage-title">20 条企业价值</h2><p>PRIORITIZED FOR B2B BUYERS</p></div>
+    <section class="advantage-group upstream" aria-labelledby="upstream-title">
+      <div class="group-head"><div><h2 id="upstream-title">01 / 上游优势</h2></div><p>回答“货从哪里来、为什么能稳定供、规模起来后还能不能继续优化成本”。</p><span class="group-count">10 ITEMS</span></div>
       <div class="grid">
-        <article class="card core"><div class="num">01 <span class="tag">上游</span></div><h3>多个供货渠道</h3><p>不依赖单一来源，能按产品、条件和交付要求灵活匹配。</p></article>
-        <article class="card core"><div class="num">02 <span class="tag">上游</span></div><h3>渠道相对稳定</h3><p>已有持续合作的供货来源，减少临时找货和交付波动。</p></article>
-        <article class="card core"><div class="num">03 <span class="tag">上游</span></div><h3>量大还能继续议价</h3><p>订单集中后，可继续谈更好的采购价、返差或结算条件。</p></article>
-        <article class="card core"><div class="num">04 <span class="tag">上游</span></div><h3>规格和条件分得清</h3><p>区分充值、成品账号、不同模型和不同售后条件，减少错售。</p></article>
-
-        <article class="card core"><div class="num">05 <span class="tag">渠道</span></div><h3>已有下游分销基础</h3><p>下游已经在采购、加价和转售，不需要从零教育市场。</p></article>
-        <article class="card core"><div class="num">06 <span class="tag">渠道</span></div><h3>伙伴不用自己囤货</h3><p>总部按订单组织供货，伙伴可以把资金和精力放在获客与销售。</p></article>
-        <article class="card core"><div class="num">07 <span class="tag">渠道</span></div><h3>复杂售后由总部协同</h3><p>伙伴仍负责客户沟通，总部协助处理复杂技术、交付和售后问题。</p></article>
-        <article class="card core"><div class="num">08 <span class="tag">渠道</span></div><h3>批发与成交分成并行</h3><p>有客户和销售能力的人可以拿货，没有交付能力的人可以做推广成交。</p></article>
-
-        <article class="card core"><div class="num">09 <span class="tag">渠道</span></div><h3>资料、报价和首单支持</h3><p>总部提供商品说明、问答、素材、订单协同和首单带练。</p></article>
-        <article class="card core"><div class="num">10 <span class="tag">渠道</span></div><h3>客户归属和结算清楚</h3><p>记录来源、订单、续费和分成，保护伙伴长期经营客户的积极性。</p></article>
-        <article class="card core"><div class="num">11 <span class="tag">企业</span></div><h3>国内外模型一站式采购</h3><p>企业不必分别寻找、开户和维护多个模型供应商。</p></article>
-        <article class="card core"><div class="num">12 <span class="tag">企业</span></div><h3>内部多模型中转站</h3><p>为企业搭建统一入口，让员工和内部应用接入不同模型。</p></article>
-
-        <article class="card core"><div class="num">13 <span class="tag">企业</span></div><h3>按任务组合模型</h3><p>根据效果、速度、预算和地区要求，为不同岗位匹配模型。</p></article>
-        <article class="card core"><div class="num">14 <span class="tag">企业</span></div><h3>接入企业现有系统</h3><p>可以继续接入客服、知识库、销售、内容和办公流程。</p></article>
-        <article class="card core"><div class="num">15 <span class="tag">技术</span></div><h3>统一权限和额度管理</h3><p>按员工、部门和应用设置访问范围、使用额度和调用规则。</p></article>
-        <article class="card core"><div class="num">16 <span class="tag">技术</span></div><h3>成本与用量可追踪</h3><p>企业能看到谁在用、用了什么、消耗多少，便于内部核算。</p></article>
-
-        <article class="card core"><div class="num">17 <span class="tag">服务</span></div><h3>一对一技术支持</h3><p>遇到开通、配置、调用或权限问题，有专人协助定位和解决。</p></article>
-        <article class="card core"><div class="num">18 <span class="tag">服务</span></div><h3>团队培训与应用落地</h3><p>帮助员工把模型用于具体岗位任务，而不是买完后闲置。</p></article>
-        <article class="card core"><div class="num">19 <span class="tag">服务</span></div><h3>持续运维与续费管理</h3><p>跟进模型变化、额度调整、人员变更、到期和后续服务。</p></article>
-        <article class="card build"><div class="num">20 <span class="tag">长期</span></div><h3>行业方案与长期复购</h3><p>把企业场景、工作流和交付经验沉淀成可复用方案。</p></article>
+        <article class="card"><div class="num">01 <span class="tag">供给</span></div><h3>多个供货渠道</h3><p>不依赖单一来源，按产品、条件和交付要求灵活匹配。</p></article>
+        <article class="card"><div class="num">02 <span class="tag">供给</span></div><h3>渠道相对稳定</h3><p>已有持续合作的供货来源，减少临时找货和交付波动。</p></article>
+        <article class="card"><div class="num">03 <span class="tag">采购</span></div><h3>量大继续议价</h3><p>订单集中后，可继续谈采购价、返差或更好的结算条件。</p></article>
+        <article class="card"><div class="num">04 <span class="tag">采购</span></div><h3>集中采购管理</h3><p>把不同渠道订单集中核价、采购和对账，减少零散损耗。</p></article>
+        <article class="card"><div class="num">05 <span class="tag">覆盖</span></div><h3>国内外模型覆盖</h3><p>可以根据客户的模型偏好、预算和地区要求组织供给。</p></article>
+        <article class="card"><div class="num">06 <span class="tag">规格</span></div><h3>交付规格分得清</h3><p>区分充值、成品账号、不同模型和不同售后条件，减少错售。</p></article>
+        <article class="card"><div class="num">07 <span class="tag">替代</span></div><h3>可做供应替代</h3><p>某个来源价格或交付变化时，有机会切换到其他渠道。</p></article>
+        <article class="card"><div class="num">08 <span class="tag">交付</span></div><h3>具备批量承接能力</h3><p>已有批量采购、充值、交付、退款和售后处理经验。</p></article>
+        <article class="card"><div class="num">09 <span class="tag">信息</span></div><h3>持续核对价格条件</h3><p>能把上游价格、库存、有效期和售后边界整理成可用资料。</p></article>
+        <article class="card"><div class="num">10 <span class="tag">谈判</span></div><h3>用真实订单换条件</h3><p>历史采购和持续补货记录可以成为上游谈价与合作谈判依据。</p></article>
       </div>
     </section>
 
-    <aside class="note"><b>对外表达建议</b><p>对下游伙伴说：<strong>你负责获客和客户关系，我们负责供货、订单协同，并协助处理复杂售后。</strong>对企业客户说：<strong>我们提供国内外多模型采购、内部中转站搭建、权限与成本管理、岗位应用落地及持续技术支持。</strong>具体响应时间、可用率、交付范围和数据处理方式，按实际方案写进服务标准。</p></aside>
+    <section class="advantage-group downstream" aria-labelledby="downstream-title">
+      <div class="group-head"><div><h2 id="downstream-title">02 / 下游代理与分销优势</h2></div><p>回答“伙伴为什么愿意卖、总部怎样帮伙伴成交并承接复杂售后”。</p><span class="group-count">12 ITEMS</span></div>
+      <div class="grid">
+        <article class="card"><div class="num">01 <span class="tag">基础</span></div><h3>已有下游分销基础</h3><p>下游已经在采购、加价和转售，不需要从零教育市场。</p></article>
+        <article class="card"><div class="num">02 <span class="tag">资金</span></div><h3>伙伴不用自己囤货</h3><p>总部按订单组织供货，伙伴把资金和精力放在获客与销售。</p></article>
+        <article class="card"><div class="num">03 <span class="tag">交付</span></div><h3>总部负责约定交付</h3><p>伙伴负责客户关系，总部按约定完成供货、开通和交付协同。</p></article>
+        <article class="card"><div class="num">04 <span class="tag">售后</span></div><h3>复杂售后由总部协同</h3><p>不是不处理售后，而是总部协助处理复杂技术、交付和退款问题。</p></article>
+        <article class="card"><div class="num">05 <span class="tag">合作</span></div><h3>批发转售模式</h3><p>有稳定客户和销售能力的伙伴，可以拿货后自行定价和销售。</p></article>
+        <article class="card"><div class="num">06 <span class="tag">合作</span></div><h3>成交分成模式</h3><p>不想囤货或承担全部交付的人，可以负责推广，由总部承接订单。</p></article>
+        <article class="card"><div class="num">07 <span class="tag">支持</span></div><h3>统一资料和报价</h3><p>总部提供商品说明、问答、素材和合作规则，减少伙伴理解成本。</p></article>
+        <article class="card"><div class="num">08 <span class="tag">首单</span></div><h3>首单带练和成交支持</h3><p>从客户判断、报价到交付，帮助伙伴完成第一笔真实订单。</p></article>
+        <article class="card"><div class="num">09 <span class="tag">关系</span></div><h3>伙伴保留客户关系</h3><p>明确来源、客户归属和续费规则，保护伙伴长期经营客户的积极性。</p></article>
+        <article class="card"><div class="num">10 <span class="tag">结算</span></div><h3>订单与分成可核对</h3><p>记录来源、订单、退款、续费和分成，减少合作中的争议。</p></article>
+        <article class="card"><div class="num">11 <span class="tag">人群</span></div><h3>适配多类合作伙伴</h3><p>订阅店、工具站、内容作者、社群主和企业服务商都能找到入口。</p></article>
+        <article class="card"><div class="num">12 <span class="tag">规模</span></div><h3>可复制活跃渠道</h3><p>先扶持少数伙伴持续成交，再用真实过程复制同类渠道。</p></article>
+      </div>
+    </section>
+
+    <section class="advantage-group enterprise" aria-labelledby="enterprise-title">
+      <div class="group-head"><div><h2 id="enterprise-title">03 / 企业端优势</h2></div><p>回答“企业为什么愿意付更高客单价，以及为什么会持续使用和续费”。</p><span class="group-count">15 ITEMS</span></div>
+      <div class="grid">
+        <article class="card"><div class="num">01 <span class="tag">采购</span></div><h3>国内外模型一站式采购</h3><p>企业不必分别寻找、开户和维护多个模型供应商。</p></article>
+        <article class="card"><div class="num">02 <span class="tag">覆盖</span></div><h3>模型选择范围更广</h3><p>可以按效果、速度、预算、地区和岗位需求组合模型。</p></article>
+        <article class="card"><div class="num">03 <span class="tag">接入</span></div><h3>搭建内部多模型中转站</h3><p>员工和内部应用通过统一入口接入不同模型，减少重复开发。</p></article>
+        <article class="card"><div class="num">04 <span class="tag">管理</span></div><h3>一个服务方统一负责</h3><p>采购、开通、配置、技术支持、售后和续费减少多头沟通。</p></article>
+        <article class="card"><div class="num">05 <span class="tag">路由</span></div><h3>按任务匹配模型</h3><p>不同岗位和任务使用不同模型，兼顾效果、速度与成本。</p></article>
+        <article class="card"><div class="num">06 <span class="tag">系统</span></div><h3>接入企业现有系统</h3><p>可以继续连接客服、知识库、销售、内容和办公流程。</p></article>
+        <article class="card"><div class="num">07 <span class="tag">权限</span></div><h3>统一权限和额度</h3><p>按员工、部门和应用设置访问范围、额度和调用规则。</p></article>
+        <article class="card"><div class="num">08 <span class="tag">成本</span></div><h3>用量与费用可追踪</h3><p>企业能知道谁在用、用了什么、消耗多少，便于内部核算。</p></article>
+        <article class="card"><div class="num">09 <span class="tag">透明</span></div><h3>数据路径更清楚</h3><p>明确请求经过哪些模型、数据如何处理以及服务边界。</p></article>
+        <article class="card"><div class="num">10 <span class="tag">技术</span></div><h3>一对一技术支持</h3><p>遇到开通、配置、调用或权限问题，有专人协助定位和解决。</p></article>
+        <article class="card"><div class="num">11 <span class="tag">售后</span></div><h3>复杂问题有人承接</h3><p>企业遇到模型、账号、接口或交付问题，可以由团队协同处理。</p></article>
+        <article class="card"><div class="num">12 <span class="tag">培训</span></div><h3>团队培训与上手</h3><p>帮助员工把模型用于具体岗位任务，避免购买后长期闲置。</p></article>
+        <article class="card"><div class="num">13 <span class="tag">定制</span></div><h3>按企业流程定制</h3><p>根据部门、岗位和业务流程调整模型组合、权限和使用方式。</p></article>
+        <article class="card"><div class="num">14 <span class="tag">运维</span></div><h3>持续维护与续费管理</h3><p>跟进模型变化、额度调整、人员变更、到期和后续服务。</p></article>
+        <article class="card"><div class="num">15 <span class="tag">长期</span></div><h3>场景沉淀带来复购</h3><p>把企业场景、工作流和交付经验沉淀成长期可复用方案。</p></article>
+      </div>
+    </section>
+
+    <aside class="note"><b>三句话对外表达</b><p><strong>上游：</strong>我们有多个相对稳定的供货渠道，订单量起来后还能继续谈采购条件。<strong>下游：</strong>你负责获客和客户关系，我们负责供货、订单协同，并协助处理复杂售后。<strong>企业端：</strong>我们提供国内外多模型采购、内部中转站搭建、岗位应用落地和持续技术支持。</p></aside>
     <footer><span>ENTERPRISE AI SERVICE · VALUE MAP</span><span>采购 / 接入 / 落地 / 运维</span></footer>
   </main>
 </body>
