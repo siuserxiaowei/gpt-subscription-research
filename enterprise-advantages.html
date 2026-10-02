@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="企业多模型接入与 AI 网关服务的 20 项核心优势。">
+  <title>企业 AI 服务优势 · 20 条</title>
+  <style>
+    :root {
+      --paper: #f3f0e8;
+      --surface: #fcfbf7;
+      --ink: #1d302b;
+      --muted: #6d776f;
+      --line: #d8d7ca;
+      --forest: #16463f;
+      --rust: #b7683c;
+      --sand: #e7dfce;
+      --blue: #dce9e5;
+      --serif: "Songti SC", "Noto Serif CJK SC", Georgia, serif;
+      --sans: "PingFang SC", "Noto Sans CJK SC", "Helvetica Neue", sans-serif;
+      --mono: "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 88% 3%, rgba(183,104,60,.11), transparent 25rem),
+        linear-gradient(120deg, rgba(22,70,63,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 28px 28px, auto;
+      font: 15px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { max-width: 1540px; margin: 0 auto; padding: 54px 68px 62px; }
+    .masthead { display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; padding-bottom: 34px; border-bottom: 1px solid var(--ink); }
+    .kicker { display: flex; align-items: center; gap: 12px; color: var(--muted); font: 11px/1.2 var(--mono); letter-spacing: 1.8px; text-transform: uppercase; }
+    .kicker::before { content: ""; width: 8px; height: 8px; background: var(--rust); border-radius: 50%; }
+    h1 { max-width: 870px; margin: 25px 0 15px; font: 600 clamp(43px, 5vw, 76px)/1.05 var(--serif); letter-spacing: -2.5px; }
+    h1 em { color: var(--forest); font-style: normal; }
+    .lede { max-width: 670px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.9; }
+    .stamp { min-width: 178px; margin-top: 12px; padding: 15px 17px; color: var(--forest); border: 1px solid #aebdb1; transform: rotate(4deg); font: 11px/1.55 var(--mono); letter-spacing: 1px; text-align: center; }
+    .stamp strong { display: block; font: 36px/1 var(--serif); letter-spacing: -1px; }
+    .thesis { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 0; margin: 30px 0 48px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .thesis > div { padding: 21px 24px 22px; border-right: 1px solid var(--line); }
+    .thesis > div:first-child { padding-left: 0; }
+    .thesis > div:last-child { border-right: 0; }
+    .thesis b { display: block; margin-bottom: 6px; color: var(--forest); font-size: 14px; }
+    .thesis span { color: var(--muted); font-size: 12px; }
+    .section-label { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+    .section-label h2 { margin: 0; font: 600 26px/1.3 var(--serif); letter-spacing: -.5px; }
+    .section-label p { margin: 0; color: var(--muted); font: 10px var(--mono); letter-spacing: 1px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--forest); border-left: 1px solid var(--line); }
+    .card { position: relative; min-height: 190px; padding: 22px 21px 20px; background: rgba(252,251,247,.82); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
+    .card::after { content: ""; position: absolute; right: -22px; bottom: -31px; width: 72px; height: 72px; border: 1px solid rgba(22,70,63,.12); border-radius: 50%; }
+    .num { display: flex; align-items: center; justify-content: space-between; color: var(--rust); font: 11px var(--mono); letter-spacing: 1px; }
+    .tag { padding: 3px 7px; color: var(--forest); background: var(--blue); border-radius: 2px; font: 9px var(--sans); letter-spacing: .2px; }
+    .card h3 { margin: 23px 0 8px; font: 600 19px/1.25 var(--serif); letter-spacing: -.35px; }
+    .card p { max-width: 285px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .card.core { background: #e8efe9; }
+    .card.core h3 { color: var(--forest); }
+    .card.build { background: #f7efe3; }
+    .card.build .tag { color: #85502f; background: #f0dcc1; }
+    .note { display: grid; grid-template-columns: auto 1fr; gap: 17px; align-items: start; margin-top: 37px; padding: 20px 21px; background: var(--sand); border-left: 3px solid var(--rust); }
+    .note b { color: var(--forest); font-size: 13px; white-space: nowrap; }
+    .note p { margin: 0; color: #716858; font-size: 12px; line-height: 1.8; }
+    footer { display: flex; justify-content: space-between; gap: 24px; margin-top: 37px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    footer span:last-child { font-family: var(--mono); letter-spacing: .7px; }
+    @media (max-width: 1000px) { .page { padding: 38px 30px; } .grid { grid-template-columns: repeat(2, 1fr); } .masthead { display: block; } .stamp { width: 180px; } }
+    @media (max-width: 620px) { .page { padding: 28px 18px 36px; } h1 { font-size: 43px; } .thesis { grid-template-columns: 1fr; } .thesis > div, .thesis > div:first-child { padding: 16px 0; border-right: 0; border-bottom: 1px solid var(--line); } .thesis > div:last-child { border-bottom: 0; } .grid { grid-template-columns: 1fr; } .card { min-height: 166px; } footer { display: block; } footer span { display: block; margin-top: 8px; } }
+    @media print { body { background: var(--paper); } .page { max-width: none; padding: 22px; } .card { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <div class="kicker">Enterprise AI / value map · 2026</div>
+        <h1>企业真正会买的<br><em>20 项优势。</em></h1>
+        <p class="lede">从“低价买账号”升级为“多模型接入与企业 AI 服务”。下面只保留能影响企业采购、上线和长期续费的价值。</p>
+      </div>
+      <div class="stamp"><strong>20</strong>核心优势<br>采购 · 接入 · 落地 · 运维</div>
+    </header>
+
+    <section class="thesis" aria-label="核心判断">
+      <div><b>一句话定位</b><span>国内外多模型统一接入，帮企业完成采购、部署、应用和持续维护。</span></div>
+      <div><b>客户买到的结果</b><span>少对接供应商、少处理技术问题、可控成本、真正用进工作流。</span></div>
+      <div><b>最强竞争组合</b><span>多渠道供给 + 内部网关搭建 + 一对一技术服务。</span></div>
+    </section>
+
+    <section aria-labelledby="advantage-title">
+      <div class="section-label"><h2 id="advantage-title">20 条企业价值</h2><p>PRIORITIZED FOR B2B BUYERS</p></div>
+      <div class="grid">
+        <article class="card core"><div class="num">01 <span class="tag">采购</span></div><h3>国内外模型一站式采购</h3><p>企业不必分别寻找、开户和维护多个模型供应商。</p></article>
+        <article class="card core"><div class="num">02 <span class="tag">采购</span></div><h3>多渠道价格比较</h3><p>用不同供给渠道降低采购成本，并按预算匹配方案。</p></article>
+        <article class="card core"><div class="num">03 <span class="tag">选择</span></div><h3>模型选择更灵活</h3><p>按任务、速度、效果、地区和预算选择合适模型。</p></article>
+        <article class="card core"><div class="num">04 <span class="tag">管理</span></div><h3>一个服务商统一负责</h3><p>采购、开通、配置、售后和续费减少多头沟通。</p></article>
+
+        <article class="card core"><div class="num">05 <span class="tag">接入</span></div><h3>企业内部统一网关</h3><p>员工和内部应用只接入一个入口，减少重复开发。</p></article>
+        <article class="card core"><div class="num">06 <span class="tag">成本</span></div><h3>模型路由与成本控制</h3><p>按任务和费用选择模型，让调用支出更可预测。</p></article>
+        <article class="card core"><div class="num">07 <span class="tag">稳定</span></div><h3>备用模型切换</h3><p>某个模型异常时保留替代路径，降低业务中断影响。</p></article>
+        <article class="card core"><div class="num">08 <span class="tag">权限</span></div><h3>统一密钥和权限</h3><p>按员工、部门和应用分配访问权限与使用额度。</p></article>
+
+        <article class="card core"><div class="num">09 <span class="tag">审计</span></div><h3>用量和费用可追踪</h3><p>知道谁在使用、用了什么、消耗多少，方便内部核算。</p></article>
+        <article class="card core"><div class="num">10 <span class="tag">安全</span></div><h3>数据路径更透明</h3><p>明确请求经过哪些模型、是否出境、由谁处理。</p></article>
+        <article class="card core"><div class="num">11 <span class="tag">落地</span></div><h3>接入企业现有系统</h3><p>可以连接客服、知识库、销售、内容和办公流程。</p></article>
+        <article class="card core"><div class="num">12 <span class="tag">落地</span></div><h3>按岗位设计工作流</h3><p>从“买模型”继续走到销售、客服、内容等具体任务。</p></article>
+
+        <article class="card core"><div class="num">13 <span class="tag">实施</span></div><h3>企业内部搭建服务</h3><p>由你们负责网关配置、模型接入和内部使用方式。</p></article>
+        <article class="card core"><div class="num">14 <span class="tag">支持</span></div><h3>一对一技术服务</h3><p>遇到开通、配置、调用或权限问题，有专人协助处理。</p></article>
+        <article class="card core"><div class="num">15 <span class="tag">培训</span></div><h3>帮助团队真正上手</h3><p>提供模型选择、提示词和岗位任务的应用指导。</p></article>
+        <article class="card core"><div class="num">16 <span class="tag">运维</span></div><h3>持续维护与升级</h3><p>模型变化、额度调整、人员变更和续费由服务方跟进。</p></article>
+
+        <article class="card build"><div class="num">17 <span class="tag">可建设</span></div><h3>稳定供货与备用渠道</h3><p>建立主供应、备份供应和异常替换流程，减少单点风险。</p></article>
+        <article class="card build"><div class="num">18 <span class="tag">可建设</span></div><h3>明确响应和交付标准</h3><p>把响应时间、故障处理、替换和退款规则写成服务标准。</p></article>
+        <article class="card build"><div class="num">19 <span class="tag">可建设</span></div><h3>行业解决方案和案例</h3><p>沉淀电商、教育、外贸和内容团队的可复用方案。</p></article>
+        <article class="card build"><div class="num">20 <span class="tag">可建设</span></div><h3>长期运维带来的复购</h3><p>网关、工作流和培训持续使用后，形成稳定服务需求。</p></article>
+      </div>
+    </section>
+
+    <aside class="note"><b>对外表达建议</b><p>不要只说“账号便宜、模型很多”。建议说：<strong>我们帮助企业统一接入国内外大模型，负责网关搭建、权限与成本管理、岗位应用落地及持续技术支持。</strong>“可建设”四项需要用真实 SLA、可用率、交付时间和客户复购数据逐步证明。</p></aside>
+    <footer><span>ENTERPRISE AI SERVICE · VALUE MAP</span><span>采购 / 接入 / 落地 / 运维</span></footer>
+  </main>
+</body>
+</html>
